@@ -1,0 +1,141 @@
+.App{
+    overflow: hidden;
+    height: 100vh;
+  }
+  
+  nav{
+    min-height: 15vh;
+    display: flex;
+    align-items: center;
+    padding: 0px 100px;
+  }
+  .colors{
+    width: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 0px 150px 0px 40px;
+  }
+  .color-btn{
+    display: grid;
+    place-content: center;
+  }
+  
+  .color-btn, 
+  .color-picker,
+  .color-picker input{
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+  }
+  .color-picker{
+    position: relative;
+  }
+  .color-picker input{
+    opacity: 0;
+  }
+  .color-picker span{
+    position: absolute;
+    inset: 0;
+    background: url(../assets/color-picker.png);
+    background-size: cover;
+  }
+
+  .pen, .eraser{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+  }
+  
+  .logo{
+    background-color: white;
+    display: grid;
+    place-content: center;
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+    box-shadow:-3px 4px 10px 0px rgba(0,0,0,0.5) ;
+    cursor: pointer;
+    border: none;
+  }
+  .range{
+    appearance: none;
+    background-color: rgb(192, 188, 188);
+    width: 100px;
+    height: 2px;
+  }
+  .range::-webkit-slider-thumb{
+    background: black;
+    appearance: none;
+    width: 10px;
+    height: 10px;
+    border-radius:50% ;
+    cursor: pointer;
+  }
+
+  .clear-btn,
+  .login-btn,
+  .dropdown{
+    background:#162340;
+    border-radius:5px;
+    padding: 10px 25px;
+    color:#fff;
+    cursor: pointer;
+    transition: all 500ms ease-in-out;
+    border: none;
+    margin-right: 200px;
+  }
+  .clear-btn{
+    background-color: rgb(112, 1, 216);
+  }
+
+  .login-btn{
+    padding: 13px 25px;
+  }
+  .clear-btn:hover{
+    background-color: rgb(132, 0, 255);
+  }
+  .logout{
+    position: absolute;
+    right: 100px;
+  }
+  .dropdown{
+    position: absolute;
+    top: 60px;
+    left: -60px;
+    opacity: 0;
+    width: 55px;
+  }
+  .user-image{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    background: url(../assets/user.png) ;
+    background-size: cover;
+  }
+  .user-image img{
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    border-radius: 50%;
+  }
+
+  .logout:hover .dropdown{
+    opacity: 1;
+    transition-duration:500ms;
+  }
+  
+  @media screen and (max-width:900px) {
+    nav{
+      flex-direction: column;
+      gap: 20px;
+      padding: 10px 20px;
+    }
+    .colors{
+      margin: 0px;
+    }
+  }
